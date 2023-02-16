@@ -13,7 +13,7 @@ pipeline {
 		stage('Deployment'){
 		    steps {
 			
-			sh 'cp target/pipeline.war pallavi-devop@127.0.1.1:/home/pallavi/Documents/GRRAS/apache-tomcat-9.0.71/webapps'
+			sh 'cp target/pipeline.war /home/pallavi/Documents/GRRAS/apache-tomcat-9.0.71/webapps'
 	}
 }}}
 
