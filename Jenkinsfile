@@ -1,23 +1,17 @@
 pipeline{
 
 agent any
+tools{
+maven 'maven'
+}
 stages
 {
-stage ("buil")
+stage ('mvn build')
 {
-steps {
-sh 'mvn clean package'
-}
-post{
 
-succes {
-echo "Artifacts"
-
-archiveArtifacts:'**/target/*.war'
-}}
-}
 stage('Deploy to tomcat server')
-{
+
 }
-}}
+}
+}
 
